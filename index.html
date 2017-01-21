@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles/fontawesome/css/font-awesome.min.css">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Rochester" rel="stylesheet">
+    <link href="styles/hover/hover-min.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/jquery.fullPage.css" />
+</head>
+
+<body>
+    <div class="header">
+        <h2>albin hagström</h2>
+        <div class="headerLinks">
+            <a href="#techSkills">
+                <h2>tech skills</h2> </a>
+            <a href="#school">
+                <h2>school</h2> </a>
+            <a href="#stuff">
+                <h2>stuff</h2> </a>
+            <a href="#work">
+                <h2>work</h2> </a>
+        </div>
+    </div>
+
+    <div id="fullpage">
+
+        <div class="landing section" data-anchor="first">
+          <div class="landingCenter revealMe">
+            <h1 id="headline">the search for jobs</h1>
+            <a href="#thei"><i class="fa fa-arrow-circle-o-down fa-4x hvr-pulse" aria-hidden="true" style="color:white;"></i></a>
+          </div>
+            <img src="pics/albinJobs.jpg" id="albinJobs" class="revealMe">
+        </div>
+        <div id="thei" class="section" style="background-color:#e4e4e4;" data-anchor="second">
+            <div id="thei" class="revealMe">
+                <div id="theiContent">
+                    <img src="pics/albcolor.png" id="albColor">
+                    <!-- <svg version="1.1" id="glassesasses" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="338.1px" height="112.5px" viewBox="0 0 338.1 112.5" style="enable-background:new 0 0 338.1 112.5;" xml:space="preserve">
+        <style type="text/css">
+        <![CDATA[
+        	.st0{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+        ]]>
+        </style>
+        <path class="st0" id="glassass" d="M40,56.5H0 M93.9,110.4c29.8,0,53.9-24.1,53.9-53.9c0-29.8-24.1-53.9-53.9-53.9C64.1,2.6,40,26.7,40,56.5
+        	C40,86.3,64.1,110.4,93.9,110.4z M298.1,56.5h40 M244.2,2.6c-29.8,0-53.9,24.1-53.9,53.9c0,29.8,24.1,53.9,53.9,53.9
+        	c29.8,0,53.9-24.1,53.9-53.9C298.1,26.7,274,2.6,244.2,2.6z M147.8,56.5h42.5"/>
+        </svg> -->
+                  <svg version="1.1" id="glasses" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="338.115px" height="112.5px" viewBox="0 0 338.115 112.5" enable-background="new 0 0 338.115 112.5" xml:space="preserve">
+                    <g>
+                    	<line stroke-linecap="round" class="line" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="40.02" y1="56.5" x2="0" y2="56.5"/>
+                    	<circle class="circle" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="93.909" cy="56.5" r="53.89"/>
+                    	<line stroke-linecap="round" class="line" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="298.096" y1="56.5" x2="338.115" y2="56.5"/>
+                    	<circle class="circle" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="244.206" cy="56.5" r="53.89"/>
+                    	<line stroke-linecap="round" class="line" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="147.799" y1="56.5" x2="190.316" y2="56.5"/>
+                    </g>
+                  </svg>
+                </div>
+                <div id="theitxt">
+                    <div id="theiNtro">
+                        <h4>introducing:</h4><br>
+                        <h3>the</h3>
+                        <h3 class="hideAlb">&nbsp;&nbsp;alb</h3>
+                        <h3>i</h3>
+                        <h3 class="hideAlb">n</h3>
+                    </div>
+                    <div id="theiNfo">
+                        <h4>digital data strategist @ hyper island</h4><br>
+                        <h4>i'm modest and somewhat creative</h4><br>
+                        <h4>decent coder/designer/whiner</h4><br>
+                        <h4>idiot < me < genius</h4>
+                    </div>
+
+                </div>
+                <a href="#techSkills" id="theiBtn"><i class="fa fa-arrow-circle-o-down fa-2x hvr-pulse" aria-hidden="true" style="color:black;margin-top:50px;"></i></a>
+            <!-- </div> -->
+        </div>
+            </div>
+        <div id="techSkills" class="section" data-anchor="third">
+            <div id="techSkills" class="revealMe">
+            <div class="titleContent">
+                <h3>technical skills</h3>
+            </div>
+            <div class="skillChart">
+                <!-- <div class="ct-chart ct-golden-section"></div> -->
+                <canvas id="mySkillChart" width="400" height="200"></canvas>
+            </div>
+
+        </div>
+        <!-- <div id="school">
+        <h3 class="titleContent">school stuff</h3>
+    </div>
+    <div id="stuff">
+        <h3 class="titleContent">stuff</h2>
+        <div class="contentStuff">
+            <img src="pics/noboringstories.png">
+            <img src="pics/kittenscup.png">
+        </div>
+    </div>
+    <div id="work">
+        <h3 class="titleContent">work stuff</h2>
+
+    </div> -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.fullpage.extensions.min.js"></script>
+    <script src="scripts/main.js"></script>
+
+</body>
+
+</html>
