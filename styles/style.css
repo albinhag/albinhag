@@ -42,8 +42,10 @@ a{
 }
 .header h2{
   display: inline-block;
-  margin: .3em;
+  margin: .5em;
+  padding-bottom: 3px;
   color: white;
+  border-color: white;
 }
 .headerLinks {
   /*position: relative;*/
@@ -235,12 +237,12 @@ a{
   /*height: 100%;*/
 }
 
-@media (max-width:600px) {
+@media screen and (max-width:600px) {
   #headline {
     font-size: 2em;
   }
-  h2 {
-    font-size: .8em;
+  .header h2 {
+    font-size: .7em;
   }
   #albinJobs{
     max-height: 50%;
@@ -261,7 +263,7 @@ a{
   #theiContent{
     width: 100%;
     height: 45%;
-    top: 0%;
+    top: 2%;
     left: 0%;
     transform: translate(0%, 0%);
   }
