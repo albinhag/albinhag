@@ -1,0 +1,313 @@
+html, body{
+  margin: 0;
+}
+h1{
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  font-size: 5em;
+  font-weight: lighter;
+}
+h2{
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  font-weight: lighter;
+  font-size: 1.2em;
+}
+h3{
+  font-family: 'Raleway', sans-serif;
+  font-size: 3em;
+  font-weight: lighter;
+}
+h4{
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+  margin: 0;
+  font-weight: lighter;
+}
+a{
+  text-decoration: none;
+}
+.header{
+  width: 100%;
+  background-color: rgba(0,0,0,0.15);
+  padding: 0 1%;
+  text-align: left;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  z-index: 20;
+  border-bottom: 1px solid white;
+}
+.header h2{
+  display: inline-block;
+  margin: .3em;
+  color: white;
+}
+.headerLinks {
+  /*position: relative;*/
+  margin-right: 2%;
+  /*display: inline-block;*/
+  /*text-align: right;*/
+  /*margin: .3em;*/
+}
+.landing{
+  width: 100%;
+  /*height: 100vh;*/
+  background-color: #000;
+  position: relative;
+  text-align: center;
+}
+.landingCenter{
+  text-align: center;
+  top: 25%;
+  position: relative;
+  z-index: 1
+}
+#headline{
+  margin-bottom: 1em;
+}
+#albinJobs{
+  max-height: 70%;
+  right: 0px;
+  bottom: 0px;
+  position: absolute;
+  display: block;
+  z-index: 0;
+}
+#thei{
+  width: 100%;
+  height: 100vh;
+  background-color: #e4e4e4;
+  display: inline-block;
+  position: relative;
+}
+#thei h3{
+  color: black;
+  display: inline-block;
+  margin-top: 2%;
+}
+#thei h4{
+  display: inline-block;
+  color: black;
+  font-size: 1.5em;
+}
+#theiBtn{
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 5%;
+}
+#theiContent{
+  width: 40%;
+  height: 70%;
+  position: relative;
+  top: 50%;
+  left: 20%;
+  display: block;
+  transform: translate(-50%, -50%);
+}
+#theiContent img{
+  width: 70%;
+  max-width: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  z-index: 10;
+}
+#glasses {
+  visibility: hidden;
+}
+.in-view > #glasses{
+  z-index: 11;
+  top: 48.7%;
+  left: 49.3%;
+  width: 55%;
+  max-width: 320px;
+  position: absolute;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+}
+.line{
+  stroke-dasharray: 42;
+  stroke-dashoffset: 40;
+  animation: dash 3s ease-in-out forwards;
+}
+.circle{
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 5s ease-in-out forwards;
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+#theitxt{
+  width: 60%;
+  height: 90%;
+  top: 3%;
+  right: 0;
+  display: inline-block;
+  position: absolute;
+}
+#theiNtro{
+  top: 10%;
+  position: absolute;
+  text-align: center;
+  width: 90%;
+}
+#theiNfo{
+  width: 85%;
+  top: 40%;
+  right: 0%;
+  text-align: left;
+  position: absolute;
+  /*display: block;*/
+  line-height: 4rem;
+}
+#stuff{
+  width: 100%;
+  height: 90vh;
+  background-color: #1C1C1C;
+  text-align: center;
+  position: relative;
+  padding-top: 10vh;
+}
+#techSkills{
+  width: 100%;
+  height: 100vh;
+  /*text-align: center;*/
+  background-color: white;
+  display: block;
+  position: relative;
+}
+.skillChart{
+  bottom: 2%;
+  position: absolute;
+  width: 80%;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+#mySkillChart{
+  height: 70%;
+}
+.titleContent{
+  top: 0%;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}
+/*#work{
+  width: 100%;
+  height: 90vh;
+  background-color: #000;
+  text-align: center;
+  position: relative;
+  padding-top: 10vh;
+  display: none;
+}
+#school{
+  width: 100%;
+  height: 90vh;
+  background-color: #1C1C1C;
+  text-align: center;
+  position: relative;
+  padding-top: 10vh;
+  display: none;
+}*/
+@keyframes blinker {
+  0% { opacity: 0; }
+}
+.in-view > .hideAlb {
+  animation-delay: 4s;
+  animation: blinker 1000ms alternate 5s backwards 4 ;
+}
+.contentStuff img{
+  border-radius: 20px;
+  max-width: 60%;
+  margin: 40px;
+}
+.hideme{
+  /*height: 100%;*/
+}
+
+@media (max-width:600px) {
+  #headline {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: .8em;
+  }
+  #albinJobs{
+    max-height: 50%;
+  }
+  #thei{
+    min-height: auto;
+  }
+  #thei h3{
+    color: black;
+    display: inline-block;
+    margin-top: 0%;
+  }
+  #thei h4{
+    display: inline-block;
+    color: black;
+    font-size: 1.0em;
+  }
+  #theiContent{
+    width: 100%;
+    height: 45%;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+  }
+  #theiContent img{
+    max-width: 40%;
+    top: 45%;
+  }
+  .in-view > #glasses{
+    z-index: 11;
+    top: 44%;
+    left: 49.5%;
+    max-width: 31%;
+    max-height: 18%;
+    position: absolute;
+    display: block;
+    transform: translate(-50%, -50%);
+  }
+  #theitxt{
+    width: 90%;
+    height: 50%;
+    top: inherit;
+    bottom: 10%;
+    right: auto;
+    left: 50%;
+    display: inline-block;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+  #theiNtro{
+    top: 5%;
+    text-align: center;
+    width: 100%;
+  }
+  #theiNfo{
+    width: 100%;
+    top: 15%;
+    margin-top: 20%;
+    text-align: center;
+    position: relative;
+    display: block;
+    line-height: 2rem;
+  }
+  #theiBtn{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 5%;
+  }
+}
