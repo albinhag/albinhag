@@ -247,15 +247,28 @@ a > h2:hover:before {
   position: relative;
 }
 .skillChart{
-  bottom: 2%;
+  /*bottom: 2%;*/
   position: absolute;
-  width: 80%;
+  width: 50%;
+  height: 90%;
+  left: 47%;
+  top: 63%;
+  transform: translateY(-50%);
+}
+.softSkillChart{
+  /*bottom: 2%;*/
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 3%;
+  top: 37%;
+  transform: translateY(-50%);
+}
+#mySoftSkillChart{
 
-  left: 50%;
-  transform: translateX(-50%);
 }
 #mySkillChart{
-  height: 70%;
+
 }
 .titleContent{
   top: 0%;
