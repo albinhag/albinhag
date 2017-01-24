@@ -42,7 +42,6 @@ $(document).ready(function() {
                 // $element.addClass('in-view');
                 $('#theiNtro').addClass('in-view');
                 $('#theiContent').addClass('in-view');
-                $('h2').addClass('.black');
             } else {
                 // $element.removeClass('in-view');
                 $('#theiNtro').removeClass('in-view');
