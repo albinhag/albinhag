@@ -76,51 +76,67 @@ $(document).ready(function() {
   // });
 
 //CHARTJS
+    var ctx = document.getElementById("mySoftSkillChart");
+    var myRadarChart = new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels: ["listen", "communication", "multitask", "flexible"],
+      datasets: [{
+          label: "skill",
+          fill: false,
+          backgroundColor: "rgba(212,16,111,0.4)",
+          borderColor: "white",
+          data: [4, 4, 4, 4],
+      }, {
+          label: "ambition",
+          backgroundColor: "rgba(117,232,78,0.4)",
+          borderColor: "transparent",
+          data: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+
+      }]
+      },
+      options: {
+          legend: {
+              display: false,
+              labels: {
+                  fontColor: 'black',
+                  fontSize: 18,
+              }
+          },
+          scales: {
+              yAxes: [{
+                  display: false,
+                  ticks: {
+                      beginAtZero: true,
+                  }
+
+              }],
+              xAxes: [{
+                display: false,
+                ticks: {
+                  min: 0
+                }
+              }]
+          }
+      }
+    });
+
     var ctx = document.getElementById("mySkillChart");
     var mySkillChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'horizontalBar',
         data: {
             labels: ["css", "javascript", "photoshop", "illustrator", "google analytics", "hotjar", "logic pro X", "final cut", "inDesign", "SEO", "social media experience"],
             datasets: [{
                 label: "skill",
                 fill: false,
-                backgroundColor: "rgba(114,103,156,0.4)",
-                borderColor: "rgba(114,103,156,1)",
-                borderCapStyle: 'round',
-                borderDash: [],
-                borderDashOffset: 0.0,
-                borderJoinStyle: 'miter',
-                pointBorderColor: "rgba(114,103,156,1)",
-                pointBackgroundColor: "#fff",
-                pointBorderWidth: 1,
-                pointHoverRadius: 5,
-                pointHoverBackgroundColor: "rgba(114,103,156,1)",
-                pointHoverBorderColor: "rgba(220,220,220,1)",
-                pointHoverBorderWidth: 2,
-                pointRadius: 1,
-                pointHitRadius: 10,
-                data: [9, 9, 8, 8, 9, 9, 9, 9, 9, 9, 9],
-                spanGaps: true,
+                backgroundColor: "rgba(212,16,111,0.4)",
+                borderColor: "white",
+                data: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
             }, {
                 label: "ambition",
-                fill: false,
-                backgroundColor: "rgba(196,122,149,0.4)",
-                borderColor: "rgba(196,122,149,1)",
-                borderCapStyle: 'round',
-                borderDash: [],
-                borderDashOffset: 0.0,
-                borderJoinStyle: 'miter',
-                pointBorderColor: "rgba(196,122,149,1)",
-                pointBackgroundColor: "#fff",
-                pointBorderWidth: 1,
-                pointHoverRadius: 5,
-                pointHoverBackgroundColor: "rgba(196,122,149,1)",
-                pointHoverBorderColor: "rgba(220,220,220,1)",
-                pointHoverBorderWidth: 2,
-                pointRadius: 1,
-                pointHitRadius: 10,
-                data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
-                spanGaps: false,
+                backgroundColor: "rgba(117,232,78,0.4)",
+                borderColor: "transparent",
+                data: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
 
             }]
 
@@ -130,17 +146,21 @@ $(document).ready(function() {
             legend: {
                 display: true,
                 labels: {
-                    fontColor: 'rgb(37, 111, 79)',
-                    fontSize: 16,
+                    fontColor: 'black',
+                    fontSize: 18,
                 }
             },
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero: true
-
+                        beginAtZero: true,
                     }
 
+                }],
+                xAxes: [{
+                  ticks: {
+                    min: 0
+                  }
                 }]
             }
         }
