@@ -76,95 +76,95 @@ $(document).ready(function() {
   // });
 
 //CHARTJS
-    var ctx = document.getElementById("mySoftSkillChart");
-    var myRadarChart = new Chart(ctx, {
-    type: 'radar',
-    data: {
-      labels: ["listen", "communication", "multitask", "flexible"],
-      datasets: [{
-          label: "skill",
-          fill: false,
-          backgroundColor: "rgba(212,16,111,0.4)",
-          borderColor: "white",
-          data: [4, 4, 4, 4],
-      }, {
-          label: "ambition",
-          backgroundColor: "rgba(117,232,78,0.4)",
-          borderColor: "transparent",
-          data: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
-
-      }]
-      },
-      options: {
-          legend: {
-              display: false,
-              labels: {
-                  fontColor: 'black',
-                  fontSize: 18,
-              }
-          },
-          scales: {
-              yAxes: [{
-                  display: false,
-                  ticks: {
-                      beginAtZero: true,
-                  }
-
-              }],
-              xAxes: [{
-                display: false,
-                ticks: {
-                  min: 0
-                }
-              }]
-          }
-      }
-    });
-
-    var ctx = document.getElementById("mySkillChart");
-    var mySkillChart = new Chart(ctx, {
-        type: 'horizontalBar',
-        data: {
-            labels: ["css", "javascript", "photoshop", "illustrator", "google analytics", "hotjar", "logic pro X", "final cut", "inDesign", "SEO", "social media experience"],
-            datasets: [{
-                label: "skill",
-                fill: false,
-                backgroundColor: "rgba(212,16,111,0.4)",
-                borderColor: "white",
-                data: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
-            }, {
-                label: "ambition",
-                backgroundColor: "rgba(117,232,78,0.4)",
-                borderColor: "transparent",
-                data: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
-
-            }]
-
-        },
-
-        options: {
-            legend: {
-                display: true,
-                labels: {
-                    fontColor: 'black',
-                    fontSize: 18,
-                }
-            },
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true,
-                    }
-
-                }],
-                xAxes: [{
-                  ticks: {
-                    min: 0
-                  }
-                }]
-            }
-        }
-    });
+    // var ctx = document.getElementById("mySoftSkillChart");
+    // var myRadarChart = new Chart(ctx, {
+    // type: 'radar',
+    // data: {
+    //   labels: ["listen", "communication", "multitask", "flexible"],
+    //   datasets: [{
+    //       label: "skill",
+    //       fill: false,
+    //       backgroundColor: "rgba(212,16,111,0.4)",
+    //       borderColor: "white",
+    //       data: [4, 4, 4, 4],
+    //   }, {
+    //       label: "ambition",
+    //       backgroundColor: "rgba(117,232,78,0.4)",
+    //       borderColor: "transparent",
+    //       data: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+    //
+    //   }]
+    //   },
+    //   options: {
+    //       legend: {
+    //           display: false,
+    //           labels: {
+    //               fontColor: 'black',
+    //               fontSize: 18,
+    //           }
+    //       },
+    //       scales: {
+    //           yAxes: [{
+    //               display: false,
+    //               ticks: {
+    //                   beginAtZero: true,
+    //               }
+    //
+    //           }],
+    //           xAxes: [{
+    //             display: false,
+    //             ticks: {
+    //               min: 0
+    //             }
+    //           }]
+    //       }
+    //   }
+    // });
+    //
+    // var ctx = document.getElementById("mySkillChart");
+    // var mySkillChart = new Chart(ctx, {
+    //     type: 'horizontalBar',
+    //     data: {
+    //         labels: ["css", "javascript", "photoshop", "illustrator", "google analytics", "hotjar", "logic pro X", "final cut", "inDesign", "SEO", "social media experience"],
+    //         datasets: [{
+    //             label: "skill",
+    //             fill: false,
+    //             backgroundColor: "rgba(212,16,111,0.4)",
+    //             borderColor: "white",
+    //             data: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+    //         }, {
+    //             label: "ambition",
+    //             backgroundColor: "rgba(117,232,78,0.4)",
+    //             borderColor: "transparent",
+    //             data: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+    //
+    //         }]
+    //
+    //     },
+    //
+    //     options: {
+    //         legend: {
+    //             display: true,
+    //             labels: {
+    //                 fontColor: 'black',
+    //                 fontSize: 18,
+    //             }
+    //         },
+    //         scales: {
+    //             yAxes: [{
+    //                 ticks: {
+    //                     beginAtZero: true,
+    //                 }
+    //
+    //             }],
+    //             xAxes: [{
+    //               ticks: {
+    //                 min: 0
+    //               }
+    //             }]
+    //         }
+    //     }
+    // });
     // /* Every time the window is scrolled ... */
     //    $(window).scroll( function(){
     //
