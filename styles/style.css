@@ -270,12 +270,14 @@ a > h2:hover:before {
   display: inline-block;
   overflow: hidden;
   border-radius: 10px;
-  opacity: 0.5;
+  /*opacity: 0.5;*/
+  /*filter: blur(2px);*/
   filter: grayscale(80%);
   transition: all 0.5s ease;
 }
 .proj:hover{
-  opacity: 1;
+  /*opacity: 1;*/
+  /*filter: blur(0px);*/
   filter: grayscale(0%);
 }
 .proj > img{
@@ -289,6 +291,13 @@ a > h2:hover:before {
   left: 50%;
   top: 50%;
   position: relative;
+  transition: all 0.5s ease;
+  filter: blur(3px);
+}
+.proj img:hover{
+  /*opacity: 1;*/
+  filter: blur(0px);
+  /*filter: grayscale(0%);*/
 }
 #overlayText{
   top: 20%;
@@ -306,14 +315,14 @@ a > h2:hover:before {
   z-index: -2
 }
 .lines {
-  stroke-dasharray: 100;
-  animation: draw 10s linear infinite;
-  opacity: 0.3;
+  stroke-dasharray: 477;
+  animation: draw 10s ease-in-out alternate infinite;
+  opacity: 0.2;
 }
 
 @keyframes draw {
   to {
-    stroke-dashoffset: 1000;
+    stroke-dashoffset: 477;
   }
 }
 .hidden{
