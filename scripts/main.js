@@ -6,6 +6,9 @@ $(document).ready(function() {
     anchors:['first', 'second', 'third'],
   });
 
+  var path = document.querySelector('.lines');
+  var length = path.getTotalLength();
+ console.log(length);
 //SMOOTH SCROLLING
     $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {
