@@ -4,11 +4,14 @@ $(document).ready(function() {
     verticalCentered: false,
     scrollBar: true,
     anchors:['first', 'second', 'third'],
+    normalScrollElements: '.scrollable-element',
   });
 
-  var path = document.querySelector('.lines');
-  var length = path.getTotalLength();
- console.log(length);
+  //CHECK PATH LENGTH
+ //  var path = document.querySelector('.lines');
+ //  var length = path.getTotalLength();
+ // console.log(length);
+
 //SMOOTH SCROLLING
     $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {
