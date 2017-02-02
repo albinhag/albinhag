@@ -59,7 +59,7 @@ function checkThis() {
         });
     });
 //SCROLL TO ANIMATE
-    var $animation_elements = $('#albColor',);
+    var $animation_elements = $('#albColor');
     // var $window = $(window);
 
     function check_if_in_view() {
