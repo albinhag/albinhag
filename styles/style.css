@@ -16,20 +16,23 @@ h2{
 }
 h3{
   font-family: 'Raleway', sans-serif;
-  font-size: 3em;
+  font-size: 4em;
   font-weight: lighter;
+  margin: 0em 0em;
+  line-height: 0em;
 }
 h4{
-  color: white;
-  font-family: 'Raleway', sans-serif;
-  font-size: 2em;
-  margin: 0;
+  color: black;
+  font-family: 'Raleway', serif;
+  font-size: 1.7em;
+  margin: 2em 0em;
+  line-height: 0em;
   font-weight: lighter;
 }
 p {
   color: black;
   font-family: 'Raleway', sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 1.6em;
   margin: 0;
   font-weight: lighter;
@@ -197,18 +200,17 @@ a{
   width: 100%;
   height: 100vh;
   background-color: #e4e4e4;
-  display: inline-block;
+  display: block;
   position: relative;
 }
 #thei h3{
-  color: black;
+  /*color: black;*/
   display: inline-block;
-  margin-top: 2%;
+  /*line-height: 0;*/
 }
 #thei h4{
-  display: inline-block;
-  color: black;
-  font-size: 1.5em;
+  /*display: block;
+  color: black;*/
 }
 #theiBtn{
   position: absolute;
@@ -218,12 +220,10 @@ a{
 }
 #theiContent{
   width: 40%;
-  height: 70%;
-  position: relative;
-  top: 50%;
-  left: 20%;
-  display: block;
-  transform: translate(-50%, -50%);
+  height: 100%;
+  top: 0;
+  position: absolute;
+  display: inline-block;
 }
 #theiContent img{
   width: 70%;
@@ -264,8 +264,8 @@ a{
 }
 #theitxt{
   width: 60%;
-  height: 90%;
-  top: 3%;
+  height: 100%;
+  /*top: 0;*/
   right: 0;
   display: inline-block;
   position: absolute;
@@ -278,22 +278,15 @@ a{
   /*font: caption;*/
 }
 #theiNtro{
-  top: 15%;
-  position: absolute;
+  transform: translateY(-50%);
+  width: 70%;
+  top: 35%;
+  margin: 0 auto;
+  position: relative;
   text-align: center;
-  width: 90%;
 }
 #theiNfo{
-  width: 65%;
-  margin-top: 10%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-
-  /*right: 5%;*/
-  text-align: left;
-  position: absolute;
-  /*display: block;*/
-  line-height: 4rem;
+  text-align: justify;
 }
 #stuff{
   width: 100%;
@@ -304,22 +297,21 @@ a{
   padding-top: 10vh;
 }
 .titleContent{
-  /*top: 0%;*/
+  top: 0%;
+  height: 10%;
   width: 100%;
-  position: absolute;
+  position: relative;
   text-align: center;
 }
-
+.titleContent h3{
+  line-height: 2em;
+}
 #works{
   height: 100vh;
   width: 100%;
-  /*overflow: hidden;*/
-  /*background-color: #000;
-  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+PHJlY3Qgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIi8+PHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9IjM0IiBoZWlnaHQ9IjM0Ij48YW5pbWF0ZSBpZD0iciIgYXR0cmlidXRlTmFtZT0iZmlsbCIgZHVyPSIxcyIgYmVnaW49IjBzO20uZW5kIiBmcm9tPSJyZWQiIHRvPSIjRkYwIi8+PGFuaW1hdGUgaWQ9InkiIGF0dHJpYnV0ZU5hbWU9ImZpbGwiIGR1cj0iMXMiIGJlZ2luPSJyLmVuZCIgZnJvbT0iI0ZGMCIgdG89IiMwRjAiLz48YW5pbWF0ZSBpZD0iZyIgYXR0cmlidXRlTmFtZT0iZmlsbCIgZHVyPSIxcyIgYmVnaW49InkuZW5kIiBmcm9tPSIjMEYwIiB0bz0iIzBGRiIvPjxhbmltYXRlIGlkPSJjIiBhdHRyaWJ1dGVOYW1lPSJmaWxsIiBkdXI9IjFzIiBiZWdpbj0iZy5lbmQiIGZyb209IiMwRkYiIHRvPSIjMDBGIi8+PGFuaW1hdGUgaWQ9ImIiIGF0dHJpYnV0ZU5hbWU9ImZpbGwiIGR1cj0iMXMiIGJlZ2luPSJjLmVuZCIgZnJvbT0iIzAwRiIgdG89IiNGMEYiLz48YW5pbWF0ZSBpZD0ibSIgYXR0cmlidXRlTmFtZT0iZmlsbCIgZHVyPSIxcyIgYmVnaW49ImIuZW5kIiBmcm9tPSIjRjBGIiB0bz0icmVkIi8+PGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIGZyb209IjAgMjUgMjUiIHRvPSI5MCAyNSAyNSIgZHVyPSIycyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L3JlY3Q+PGNpcmNsZSBjeD0iMjUiIGN5PSIyNSIgcj0iMTAiLz48L3N2Zz4=");
-  background-position: center center;*/
 }
 #projects{
-  top: 20%;
+  top: 5%;
   margin: 0 auto;
   width: 85%;
   position: relative;
@@ -489,6 +481,7 @@ a{
   }
   #thei{
     min-height: auto;
+    display: inline-block;
   }
   #thei h3{
     color: black;
@@ -496,51 +489,40 @@ a{
     margin-top: 0%;
   }
   #thei h4{
-    display: inline-block;
     color: black;
-    font-size: .9em;
+    font-size: 1em;
   }
   #theiContent{
     width: 100%;
     height: 45%;
-    top: 2%;
-    left: 0%;
-    transform: translate(0%, 0%);
+    top: 3%;
+    display: block;
   }
   #theiContent img{
-    max-width: 40%;
+    width: 50%;
     top: 45%;
   }
   .in-view > #glasses{
-    z-index: 11;
-    top: 44%;
-    left: 49.5%;
-    max-width: 31%;
+    top: 43%;
+    max-width: 40%;
     max-height: 18%;
-    position: absolute;
-    display: block;
-    transform: translate(-50%, -50%);
   }
   #theitxt{
-    width: 90%;
-    height: 50%;
-    top: inherit;
-    bottom: 10%;
-    right: auto;
-    left: 50%;
-    display: inline-block;
-    position: absolute;
-    transform: translateX(-50%);
+    width: 100%;
+    max-width: 500px;
+    top: 27%;
+    display: block;
   }
   #theiNtro{
-    top: 5%;
+    /*line-height: 1em;*/
+    /*top: 5%;*/
     text-align: center;
-    width: 100%;
+    width: 90%;
   }
   #theiNfo{
     width: 100%;
-    top: 15%;
-    margin-top: 20%;
+    /*top: 15%;*/
+    /*margin-top: 20%;*/
     text-align: center;
     position: relative;
     display: block;
