@@ -7,24 +7,36 @@ $(document).ready(function() {
     $(".menuVert").toggle("slide", {direction: "right"}, 'fast');
   });
 
+
   var $win = $(window),
       $winH = $win.height();
 
+setTimeout(checkThis, 1000);
+
+function checkThis() {
   $win.scroll(function() {
 
     var scrTp = $(this).scrollTop();
 
     if (scrTp > $winH) {
       $('.menu, .menuVert').css('position', 'fixed');
+      return;
     } else if (scrTp < ($winH / 2) ) {
       $('.menuVert').slideUp('medium');
       $('.menu').removeClass('open');
+      return;
     } else {
       if (scrTp < $winH) {
         $('.menu, .menuVert').css('position', 'absolute');
+        return;
       }
     }
-  });
+    console.log($winH);
+
+  })
+};
+
+
 
   //CHECK PATH LENGTH
  //  var path = document.querySelector('.lines');
