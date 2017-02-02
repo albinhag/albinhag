@@ -1,77 +1,30 @@
 $(document).ready(function() {
-  $('#fullpage').fullpage({
-    // verticalCentered: false,
-    // scrollBar: true,
-    anchors:['first', 'second', 'third'],
-    // normalScrollElements: '.scrollable-element',
+// MENU SHIT
+  $('.menuVert').hide();
 
-    //Navigation
-       menu: '.header',
-       lockAnchors: false,
-      //  anchors:['page1', 'page2', 'page3'],
-       navigation: false,
-       navigationPosition: 'right',
-       navigationTooltips: ['firstSlide', 'secondSlide'],
-       showActiveTooltip: false,
-       slidesNavigation: false,
-       slidesNavPosition: 'bottom',
+  $('.menu').click(function(){
+    $('.menu').toggleClass('open');
+    $(".menuVert").toggle("slide", {direction: "right"}, 'fast');
+  });
 
-       //Scrolling
-       css3: true,
-       scrollingSpeed: 700,
-       autoScrolling: true,
-       fitToSection: true,
-       fitToSectionDelay: 1000,
-       scrollBar: true,
-       easing: 'easeInOutCubic',
-       easingcss3: 'ease',
-       loopBottom: false,
-       loopTop: false,
-       loopHorizontal: true,
-       continuousVertical: false,
-       continuousHorizontal: false,
-       scrollHorizontally: false,
-       interlockedSlides: false,
-       dragAndMove: false,
-       offsetSections: false,
-       resetSliders: true,
-       fadingEffect: false,
-       scrollOverflow: false,
-       scrollOverflowOptions: null,
-       touchSensitivity: 15,
-       normalScrollElementTouchThreshold: 5,
-       bigSectionsDestination: null,
+  var $win = $(window),
+      $winH = $win.height();
 
-       //Accessibility
-       keyboardScrolling: true,
-       animateAnchor: false,
-       recordHistory: true,
+  $win.scroll(function() {
 
-       //Design
-       controlArrows: true,
-       verticalCentered: false,
+    var scrTp = $(this).scrollTop();
 
-       responsiveWidth: 0,
-       responsiveHeight: 0,
-       responsiveSlides: false,
-
-       //Custom selectors
-       sectionSelector: '.section',
-       slideSelector: '.slide',
-
-       lazyLoading: false,
-
-       //events
-       onLeave: function(index, nextIndex, direction){},
-       afterLoad: function(anchorLink, index){},
-       afterRender: function(){},
-       afterResize: function(){},
-       afterResponsive: function(isResponsive){},
-       afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-       onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-   });
-
-
+    if (scrTp > $winH) {
+      $('.menu, .menuVert').css('position', 'fixed');
+    } else if (scrTp < ($winH / 2) ) {
+      $('.menuVert').slideUp('medium');
+      $('.menu').removeClass('open');
+    } else {
+      if (scrTp < $winH) {
+        $('.menu, .menuVert').css('position', 'absolute');
+      }
+    }
+  });
 
   //CHECK PATH LENGTH
  //  var path = document.querySelector('.lines');
@@ -79,27 +32,27 @@ $(document).ready(function() {
  // console.log(length);
 
 //SMOOTH SCROLLING
-    // $(function() {
-    //     $('a[href*="#"]:not([href="#"])').click(function() {
-    //         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-    //             var target = $(this.hash);
-    //             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    //             if (target.length) {
-    //                 $('html, body').animate({
-    //                     scrollTop: target.offset().top
-    //                 }, 1000);
-    //                 return false;
-    //             }
-    //         }
-    //     });
-    // });
+    $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 700);
+                    return false;
+                }
+            }
+        });
+    });
 //SCROLL TO ANIMATE
-    var $animation_elements = $('#albColor');
-    var $window = $(window);
+    var $animation_elements = $('#albColor',);
+    // var $window = $(window);
 
     function check_if_in_view() {
-        var window_height = $window.height();
-        var window_top_position = $window.scrollTop();
+        var window_height = $win.height();
+        var window_top_position = $win.scrollTop();
         var window_bottom_position = (window_top_position + window_height);
 
         $.each($animation_elements, function() {
@@ -121,8 +74,19 @@ $(document).ready(function() {
             }
         });
     }
-    $window.on('scroll resize', check_if_in_view);
-    $window.trigger('scroll');
+    $win.on('scroll resize', check_if_in_view);
+    $win.trigger('scroll');
+
+    // if  ($(this).scrollTop() > (winH*1.5)) {
+    //     // $element.addClass('in-view');
+    //     $('#theiNtro').addClass('in-view');
+    //     $('#theiContent').addClass('in-view');
+    // } else if  ($(this).scrollTop() < (winH*1.5) ){
+    //     // $element.removeClass('in-view');
+    //     $('#theiNtro').removeClass('in-view');
+    //     $('#theiContent').removeClass('in-view');
+    // };
+
 // END
 //SCROLL REVEAL
     window.sr = ScrollReveal({
@@ -131,131 +95,10 @@ $(document).ready(function() {
     sr.reveal('.revealMe', {
         duration: 2000,
     });
-//CHARTIST
-  // new Chartist.Bar('.ct-chart', {
-  //   labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-  //   series: [
-  //     [5, 4, 3, 7, 5, 10, 3],
-  //     [3, 2, 9, 5, 4, 5, 4]
-  //   ]
-  // }, {
-  //   seriesBarDistance: 10,
-  //   reverseData: true,
-  //   horizontalBars: true,
-  //   axisY: {
-  //     offset: 70
-  //   }
-  // });
 
-//CHARTJS
-    // var ctx = document.getElementById("mySoftSkillChart");
-    // var myRadarChart = new Chart(ctx, {
-    // type: 'radar',
-    // data: {
-    //   labels: ["listen", "communication", "multitask", "flexible"],
-    //   datasets: [{
-    //       label: "skill",
-    //       fill: false,
-    //       backgroundColor: "rgba(212,16,111,0.4)",
-    //       borderColor: "white",
-    //       data: [4, 4, 4, 4],
-    //   }, {
-    //       label: "ambition",
-    //       backgroundColor: "rgba(117,232,78,0.4)",
-    //       borderColor: "transparent",
-    //       data: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
-    //
-    //   }]
-    //   },
-    //   options: {
-    //       legend: {
-    //           display: false,
-    //           labels: {
-    //               fontColor: 'black',
-    //               fontSize: 18,
-    //           }
-    //       },
-    //       scales: {
-    //           yAxes: [{
-    //               display: false,
-    //               ticks: {
-    //                   beginAtZero: true,
-    //               }
-    //
-    //           }],
-    //           xAxes: [{
-    //             display: false,
-    //             ticks: {
-    //               min: 0
-    //             }
-    //           }]
-    //       }
-    //   }
-    // });
-    //
-    // var ctx = document.getElementById("mySkillChart");
-    // var mySkillChart = new Chart(ctx, {
-    //     type: 'horizontalBar',
-    //     data: {
-    //         labels: ["css", "javascript", "photoshop", "illustrator", "google analytics", "hotjar", "logic pro X", "final cut", "inDesign", "SEO", "social media experience"],
-    //         datasets: [{
-    //             label: "skill",
-    //             fill: false,
-    //             backgroundColor: "rgba(212,16,111,0.4)",
-    //             borderColor: "white",
-    //             data: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
-    //         }, {
-    //             label: "ambition",
-    //             backgroundColor: "rgba(117,232,78,0.4)",
-    //             borderColor: "transparent",
-    //             data: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
-    //
-    //         }]
-    //
-    //     },
-    //
-    //     options: {
-    //         legend: {
-    //             display: true,
-    //             labels: {
-    //                 fontColor: 'black',
-    //                 fontSize: 18,
-    //             }
-    //         },
-    //         scales: {
-    //             yAxes: [{
-    //                 ticks: {
-    //                     beginAtZero: true,
-    //                 }
-    //
-    //             }],
-    //             xAxes: [{
-    //               ticks: {
-    //                 min: 0
-    //               }
-    //             }]
-    //         }
-    //     }
-    // });
-    // /* Every time the window is scrolled ... */
-    //    $(window).scroll( function(){
-    //
-    //        /* Check the location of each desired element */
-    //        $('.hideme').each( function(i){
-    //
-    //            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-    //            var bottom_of_window = $(window).scrollTop() + $(window).height();
-    //
-    //            /* If the object is completely visible in the window, fade it it */
-    //            if( bottom_of_window > bottom_of_object ){
-    //
-    //                $(this).animate({'opacity':'1'},1000);
-    //
-    //            }
-    //
-    //        });
-    //
-    //    });
+//     $('.menu').click (function(){
+//   $('.menu').toggleClass('open');
+// });
 
     //DRAW WITH SCROLLING
     // // Get the id of the <path> element and the length of <path>
@@ -263,7 +106,7 @@ $(document).ready(function() {
     // var length = triangle.getTotalLength();
     //
     // // The start position of the drawing
-    // triangle.style.strokeDasharray = 100 + length;
+    // triangle.style.strokeDasharray = 1000 + length;
     //
     // // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
     // triangle.style.strokeDashoffset = length;
