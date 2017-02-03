@@ -11,7 +11,7 @@ $(document).ready(function() {
   var $win = $(window),
       $winH = $win.height();
 
-setTimeout(checkThis, 1000);
+setTimeout(checkThis, 100);
 
 function checkThis() {
   $win.scroll(function() {
@@ -100,17 +100,6 @@ function checkThis() {
     // };
 
 // END
-//SCROLL REVEAL
-    window.sr = ScrollReveal({
-        reset: true,
-    });
-    sr.reveal('.revealMe', {
-        duration: 2000,
-    });
-
-//     $('.menu').click (function(){
-//   $('.menu').toggleClass('open');
-// });
 
     //DRAW WITH SCROLLING
     // // Get the id of the <path> element and the length of <path>
