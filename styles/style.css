@@ -483,14 +483,14 @@ a{
     top: 3%;
     display: block;
   }
-  #theiContent img{
-    width: 50%;
-    top: 45%;
+  #albColor{
+    max-width: 43%;
+    top: 40%;
   }
   .in-view > #glasses{
-    top: 43%;
-    max-width: 40%;
-    max-height: 18%;
+    top: 38%;
+    max-width: 34%;
+    /*max-height: 18%;*/
   }
   #theitxt{
     width: 100%;
