@@ -4,8 +4,8 @@ html, body{
 h1{
   color: white;
   font-family: mr-eaves-modern, sans-serif;
-  margin: 0;
-  font-size: 9em;
+  margin: 0 0;
+  font-size: 12vw;
   font-weight: 300;
 }
 h2{
@@ -17,17 +17,17 @@ h2{
 }
 h3{
   font-family: mr-eaves-modern, sans-serif;
-  font-size: 10em;
+  font-size: 14vw;
   font-weight: lighter;
-  margin: .3em 0em;
-  line-height: 0em;
+  line-height: 1em;
+  margin: 0 0;
 }
 h4{
   color: black;
   font-family: futura-pt, sans-serif;
-  font-size: 1.7em;
+  font-size: 2.8vw;
   margin: 0em 0em;
-  line-height: 3em;
+  /*line-height: 3em;*/
   font-weight: lighter;
 }
 p {
@@ -172,22 +172,17 @@ a{
   line-height: 2em;
 }
 .landingCenter{
-  text-align: center;
   top: 25%;
+  width: 95%;
+  margin: 0 auto;
   position: relative;
   z-index: 1
-}
-#headline{
-  margin-bottom: 0em;
-  /*font-family: futura-pt, sans-serif;*/
 }
 #albinJobs{
   max-height: 70%;
   right: 0px;
   bottom: 0px;
   position: absolute;
-  display: block;
-  z-index: 0;
   transition: 2s;
 }
 #thei{
@@ -198,13 +193,7 @@ a{
   position: relative;
 }
 #thei h3{
-  /*color: black;*/
-  display: inline-block;
-  /*line-height: 0;*/
-}
-#thei h4{
-  /*display: block;
-  color: black;*/
+  display: inline;
 }
 #theiBtn{
   position: absolute;
@@ -219,7 +208,7 @@ a{
   position: absolute;
   display: inline-block;
 }
-#theiContent img{
+#albColor{
   width: 70%;
   max-width: 400px;
   left: 50%;
@@ -258,20 +247,30 @@ a{
     opacity: 1;
   }
 }
+#navLines{
+  display: none;
+}
+.in-view > #navLines{
+  /*display: block;*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+}
+#nLine{
+  display: block;
+  stroke-dasharray: 368;
+  stroke-dashoffset: 368;
+  /*367.81207275390625*/
+  animation: dash 4s ease-in-out forwards 5s;
+}
 #theitxt{
   width: 60%;
   height: 100%;
-  /*top: 0;*/
+  top: 0;
   right: 0;
   display: inline-block;
   position: absolute;
-}
-#theiNfo span{
-  /*vertical-align: baseline;*/
-  font-weight: bold;
-  /*position: relative;*/
-  /*line-height: 1em;*/
-  /*font: caption;*/
 }
 #theiNtro{
   transform: translateY(-50%);
@@ -283,6 +282,7 @@ a{
 }
 #theiNfo{
   text-align: justify;
+  margin-top: 2em;
 }
 #stuff{
   width: 100%;
@@ -293,53 +293,55 @@ a{
   padding-top: 10vh;
 }
 .titleContent{
-  top: 0%;
-  height: 10%;
+  margin-top: 20px;
+  left: 1.5%;
   width: 100%;
   position: relative;
+  display: block;
   text-align: center;
 }
-.titleContent h3{
-  line-height: .5em;
+.titleContent h3 p{
+  display: inline;
+  /*vertical-align: bottom;*/
 }
 #works{
   height: 100vh;
   width: 100%;
-}
-#projects{
-  /*top: 5%;*/
-  /*margin: 0 auto;
-  width: 85%;
   position: relative;
   display: block;
-  text-align: justify;
-  font-size: 0.1px;*/
-  /*transform: translateX(-50%);
-  left: 50%;*/
-  /*font-size: 0;*/
 }
-#projects:after{
+#projects{
+  /*top: 50%;*/
+  transform: translateX(-50%);
+  left: 50%;
+  width: 90%;
+  position: absolute;
+  display: block;
+  font-size: 0.1px;
+  text-align: center;
+}
+/*#projects:after{
   content: '';
- width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+ width: 100%;
  display: inline-block;
-}
+}*/
 .proj{
-  width: 350px;
-  height: 250px;
+  width: 300px;
+  height: 200px;
   background-color: #e4e4e4;
   display: inline-block;
   overflow: hidden;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   position: relative;
   filter: grayscale(80%);
   transition: all 0.5s ease;
-  margin-top: 20px;
+  margin: 0;
 }
 .proj:hover{
   filter: grayscale(0%);
 }
 .proj > img{
-  width: 350px;
+  width: 300px;
   max-height: 101%;
   transform: translate(-50%,-50%);
   left: 50%;
@@ -386,7 +388,7 @@ a{
 }
 .in-view > .hideAlb {
   animation-delay: 4s;
-  animation: blinker 1000ms alternate 5s backwards 8 ;
+  animation: blinker 100ms alternate 5s backwards 10 ;
 }
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -472,30 +474,8 @@ a{
   cursor: pointer;
 }
 @media screen and (max-width:600px) {
-  #headline {
-    font-size: 2em;
-  }
-  #landingPage p{
-    font-size: 1em;
-  }
-  .header h2 {
-    font-size: .7em;
-  }
   #albinJobs{
-    max-height: 50%;
-  }
-  #thei{
-    min-height: auto;
-    display: inline-block;
-  }
-  #thei h3{
-    color: black;
-    display: inline-block;
-    margin-top: 0%;
-  }
-  #thei h4{
-    color: black;
-    font-size: 1em;
+    max-height: 55%;
   }
   #theiContent{
     width: 100%;
@@ -514,34 +494,37 @@ a{
   }
   #theitxt{
     width: 100%;
-    max-width: 500px;
     top: 27%;
     display: block;
   }
   #theiNtro{
-    /*line-height: 1em;*/
-    /*top: 5%;*/
-    text-align: center;
-    width: 90%;
+    width: 95%;
   }
   #theiNfo{
-    width: 100%;
-    /*top: 15%;*/
-    /*margin-top: 20%;*/
-    text-align: center;
-    position: relative;
-    display: block;
-    line-height: 2rem;
+    margin-top: 1em;
   }
-  #theiBtn{
-    position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
-    bottom: 5%;
-  }
-  .proj{
+  /*.proj{
     transform: translateX(-50%);
     left: 50%;
     position: relative;
+  }*/
+  .header{
+    display: none;
+  }
+  .landingCenter{
+    top: 15%;
+  }
+  #headline{
+    font-size: 15vw;
+  }
+  h3{
+    font-size: 25vw;
+    line-height: .5em;
+  }
+  h4{
+    font-size: 5vw;
+  }
+  #works{
+    height: auto;
   }
 }

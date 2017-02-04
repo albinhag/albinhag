@@ -39,9 +39,9 @@ function checkThis() {
 
 
   //CHECK PATH LENGTH
- //  var path = document.querySelector('.lines');
- //  var length = path.getTotalLength();
- // console.log(length);
+  var path = document.querySelector('#nLine');
+  var length = path.getTotalLength();
+ console.log(length);
 
 //SMOOTH SCROLLING
     $(function() {
@@ -79,10 +79,12 @@ function checkThis() {
                 // $element.addClass('in-view');
                 $('#theiNtro').addClass('in-view');
                 $('#theiContent').addClass('in-view');
+                $('#navLines').addClass('in-view');
             } else {
                 // $element.removeClass('in-view');
                 $('#theiNtro').removeClass('in-view');
                 $('#theiContent').removeClass('in-view');
+                $('#navLines').removeClass('in-view');
             }
         });
     }
