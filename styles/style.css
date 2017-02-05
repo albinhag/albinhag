@@ -14,6 +14,7 @@ h2{
   font-weight: 300;
   font-size: 2em;
   line-height: 1em;
+
 }
 h3{
   font-family: mr-eaves-modern, sans-serif;
@@ -49,7 +50,7 @@ a{
 }
 .menu {
   position: absolute;
-  z-index: 99;
+  z-index: 6;
   width: 50px;
   height: 50px;
   top: 12px;
@@ -65,17 +66,17 @@ a{
   right: 0;
   top: 0;
   height: 100vh;
-  background-color: rgba(0,0,0,0.15);
-  z-index: 10;
+  background-color: rgba(0,0,0,1);
+  z-index: 5;
 }
 .menuVert h2{
   display: block;
   margin: 0em .2em;
-  color: black;
+  color: white;
   border-color: white;
 }
 .menuVert h2:hover{
-  color: white;
+  color: #404040;
 }
 #menuVertTxt{
   text-align: center;
@@ -89,7 +90,7 @@ a{
   position: absolute;
   display: flex;
   justify-content: space-between;
-  z-index: 20;
+  z-index: 1;
   border-bottom: 1px solid grey;
 }
 .header h2{
@@ -126,43 +127,6 @@ a{
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-@-webkit-keyframes hvr-pulse {
-  25% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-  75% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-}
-@keyframes hvr-pulse {
-  25% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-  75% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-}
-.hvr-pulse {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-}
-.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
-  -webkit-animation-name: hvr-pulse;
-  animation-name: hvr-pulse;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
 /*----------------------------------LANDING--------------------------*/
 #landingPage{
   width: 100%;
@@ -182,7 +146,8 @@ a{
   width: 95%;
   margin: 0 auto;
   position: relative;
-  z-index: 1
+  z-index: 100;
+  transition: 2s;
 }
 #albinJobs{
   max-height: 70%;
@@ -190,6 +155,8 @@ a{
   bottom: 0px;
   position: absolute;
   transition: 2s;
+  z-index: 1;
+
 }
 /*----------------------------------THE I--------------------------*/
 #thei{
@@ -205,7 +172,8 @@ a{
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
-  bottom: 5%;
+  bottom: 1%;
+  z-index: 1000;
 }
 #theiContent{
   width: 40%;
@@ -300,16 +268,17 @@ a{
   padding-top: 10vh;
 }
 .titleContent{
-  margin-top: 20px;
+  margin-bottom: .5em;
   /*left: 1.5%;*/
   width: 100%;
   position: relative;
   display: block;
   text-align: center;
+  z-index: 2;
 }
-.titleContent h3 p{
-  display: inline;
-  /*vertical-align: bottom;*/
+.titleContent h3, .titleContent p{
+  /*display: inline;*/
+  line-height: .7em;
 }
 /*----------------------------------WORKS--------------------------*/
 #works{
@@ -318,18 +287,12 @@ a{
   display: block;
 }
 #projects{
-  transform: translateX(-50%);
-  left: 50%;
   width: 90%;
-  position: absolute;
+  position: relative;
   display: block;
   text-align: center;
+  margin: 0 auto;
 }
-/*#projects:after{
-  content: '';
- width: 100%;
- display: inline-block;
-}*/
 .proj{
   width: 30%;
   height: auto;
@@ -367,7 +330,7 @@ a{
 }
 /*----------------------------------CONTACT--------------------------*/
 #contact{
-  height: 80vh;
+  height: 70vh;
   background-color: #e4e4e4;
 }
 .socialIcons{
@@ -380,6 +343,7 @@ a{
 .socialIcons a{
   display: inline-block;
   margin: 20px;
+  font-size: 110%;
 }
 
 /*
@@ -421,19 +385,6 @@ a{
   -moz-animation-duration:3s;
   animation-duration:3s;
 }
-.btn14 .icon-circle {
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  border-radius: 100%;
-  background: transparent;
-  /*border: 4px solid black;*/
-  transform: translate(-50%,-50%);
-}
 .btn14 .icon {
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
@@ -469,22 +420,62 @@ a{
   border-radius: 4px;
 }
 .btn14.open .icon {
+  background-color: #fff;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
   background: transparent;
 }
 .btn14.open .icon:before {
+  background-color: #fff;
   -webkit-transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px);
           transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px);
 }
 .btn14.open .icon:after {
+  background-color: #fff;
   -webkit-transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
           transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
 }
 .btn14:hover {
   cursor: pointer;
 }
-/*----------------------------------------HANG----------------------------------------*/
+/*----------------------------------------HOVERS----------------------------------------*/
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+.hvr-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
 @-webkit-keyframes hvr-hang {
   0% {
     -webkit-transform: translateY(8px);
@@ -598,7 +589,13 @@ a{
   h4{
     font-size: 5vw;
   }
+  #projects{
+    margin-top: 20%;
+  }
   .proj{
     width: 45%;
+  }
+  #contact{
+    height: 100vh;
   }
 }
