@@ -334,7 +334,6 @@ a{
   background-color: #e4e4e4;
 }
 .socialIcons{
-  width: 50%;
   position: relative;
   display: block;
   text-align: center;
@@ -598,5 +597,8 @@ a{
   }
   #contact{
     height: 100vh;
+  }
+  .socialIcons a{
+    display: block;
   }
 }
