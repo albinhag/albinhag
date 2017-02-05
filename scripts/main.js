@@ -7,6 +7,9 @@ $(document).ready(function() {
     $(".menuVert").toggle("slide", {direction: "right"}, 'fast');
   });
 
+  /Mobile/.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+      if (!pageYOffset) window.scrollTo(0, 1);
+  }, 1000);
 
   var $win = $(window),
       $winH = $win.height();
