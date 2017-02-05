@@ -40,6 +40,7 @@ p {
 }
 a{
   text-decoration: none;
+  color:inherit;
 }
 .fullpage {
   height: 100vh;
@@ -52,14 +53,14 @@ a{
   width: 50px;
   height: 50px;
   top: 12px;
-  right: 12px;
+  right: 20px;
   margin: 0;
   -webkit-transition-duration: .5s;
           transition-duration: .5s;
 }
 .menuVert{
   position: fixed;
-  width: 70px;
+  width: 90px;
   margin: 0;
   right: 0;
   top: 0;
@@ -162,6 +163,7 @@ a{
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
+/*----------------------------------LANDING--------------------------*/
 #landingPage{
   width: 100%;
   background-color: #000;
@@ -189,6 +191,7 @@ a{
   position: absolute;
   transition: 2s;
 }
+/*----------------------------------THE I--------------------------*/
 #thei{
   width: 100%;
   background-color: #e4e4e4;
@@ -308,6 +311,7 @@ a{
   display: inline;
   /*vertical-align: bottom;*/
 }
+/*----------------------------------WORKS--------------------------*/
 #works{
   width: 100%;
   position: relative;
@@ -361,16 +365,30 @@ a{
   background-color: black;
   /*font-size: 0;*/
 }
-#works svg{
-  position: absolute;
-  z-index: -2
+/*----------------------------------CONTACT--------------------------*/
+#contact{
+  height: 80vh;
+  background-color: #e4e4e4;
 }
+.socialIcons{
+  width: 100%;
+  margin-top: 50px;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+.socialIcons a{
+  display: inline-block;
+  margin: 20px;
+}
+
+/*
 .lines {
   stroke-dasharray: 477;
   animation: draw 10s ease-in-out alternate infinite;
   opacity: 0.2;
 }
-
+*/
 @keyframes draw {
   to {
     stroke-dashoffset: 477;
@@ -450,9 +468,6 @@ a{
   top: 10px;
   border-radius: 4px;
 }
-.btn14.open .icon-circle {
-  /*background: #fff;*/
-}
 .btn14.open .icon {
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
@@ -468,6 +483,70 @@ a{
 }
 .btn14:hover {
   cursor: pointer;
+}
+/*----------------------------------------HANG----------------------------------------*/
+@-webkit-keyframes hvr-hang {
+  0% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  50% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+@keyframes hvr-hang {
+  0% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  50% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+@-webkit-keyframes hvr-hang-sink {
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+@keyframes hvr-hang-sink {
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+.hvr-hang {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.hvr-hang:hover, .hvr-hang:focus, .hvr-hang:active {
+  -webkit-animation-name: hvr-hang-sink, hvr-hang;
+  animation-name: hvr-hang-sink, hvr-hang;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
 }
 @media screen and (max-width:600px) {
   #albinJobs{
