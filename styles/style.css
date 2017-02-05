@@ -42,7 +42,8 @@ a{
   text-decoration: none;
 }
 .fullpage {
-  height: 100vh
+  height: 100vh;
+  -webkit-transition: height 1000ms;
   transition: height 1000ms;
 }
 .menu {
