@@ -39,9 +39,9 @@ function checkThis() {
 
 
   //CHECK PATH LENGTH
-  var path = document.querySelector('#nLine');
-  var length = path.getTotalLength();
- console.log(length);
+ //  var path = document.querySelector('#nLine');
+ //  var length = path.getTotalLength();
+ // console.log(length);
 
 //SMOOTH SCROLLING
     $(function() {
