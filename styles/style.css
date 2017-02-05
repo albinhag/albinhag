@@ -479,12 +479,12 @@ a{
     position: relative;
   }
   #albColor{
-    max-width: 43%;
-    top: 40%;
+    max-width: 48%;
+    top: 45%;
   }
   .in-view > #glasses{
-    top: 38%;
-    max-width: 34%;
+    top: 45%;
+    max-width: 38%;
     /*max-height: 18%;*/
   }
   #theitxt{
@@ -501,11 +501,6 @@ a{
     width: 95%;
     margin-top: 1em;
   }
-  /*.proj{
-    transform: translateX(-50%);
-    left: 50%;
-    position: relative;
-  }*/
   .header{
     display: none;
   }
