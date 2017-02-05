@@ -523,7 +523,7 @@ a{
     font-size: 5vw;
   }
   #works{
-    height: auto;
+    /*height: auto;*/
   }
   .proj{
     width: 45%;
