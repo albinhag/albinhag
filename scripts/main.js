@@ -7,14 +7,14 @@ $(document).ready(function() {
     $(".menuVert").toggle("slide", {direction: "right"}, 'fast');
   });
 //SCREENFIX
-  // var fullH = $(".fullpage");
-  //
-  // function resizeBackground() {
-  //     fullH.height($(window).height());
-  // }
-  //
-  // $(window).resize(resizeBackground);
-  // resizeBackground();
+  var fullH = $(".fullpage");
+
+  function resizeBackground() {
+      fullH.height($(window).outerHeight(true));
+  }
+  
+  $(window).resize(resizeBackground);
+  resizeBackground();
 //END
   var $win = $(window),
       $winH = $win.height();
