@@ -294,7 +294,7 @@ a{
 }
 .titleContent{
   margin-top: 20px;
-  left: 1.5%;
+  /*left: 1.5%;*/
   width: 100%;
   position: relative;
   display: block;
@@ -333,26 +333,26 @@ a{
   overflow: hidden;
   /*border-radius: 10px;*/
   position: relative;
-  filter: grayscale(80%);
+  filter: grayscale(60%);
   transition: all 0.5s ease;
-  margin: 0;
+  margin: -1px;
 }
 .proj:hover{
   filter: grayscale(0%);
 }
 .proj > img{
   width: 300px;
-  max-height: 101%;
+  height: 200px;
   transform: translate(-50%,-50%);
   left: 50%;
   top: 50%;
   vertical-align: top;
   position: relative;
-  transition: all 0.5s ease;
-  filter: blur(3px);
+  /*transition: all 0.5s ease;*/
+  /*filter: blur(1px);*/
 }
 .proj:hover > img{
-  filter: blur(0px);
+  /*filter: blur(0px);*/
 }
 #overlayText{
   top: 20%;
@@ -482,6 +482,7 @@ a{
     height: 45%;
     top: 3%;
     display: block;
+    position: relative;
   }
   #albColor{
     max-width: 43%;
@@ -494,7 +495,9 @@ a{
   }
   #theitxt{
     width: 100%;
-    top: 27%;
+    top: inherit;
+    bottom: 0;
+    height: auto;
     display: block;
   }
   #theiNtro{
