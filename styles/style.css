@@ -43,8 +43,8 @@ a{
 }
 .fullpage {
   height: 100vh;
-  -webkit-transition: height 1000ms;
-  transition: height 1000ms;
+  -webkit-transition: height 3s;
+  transition: height 3s;
 }
 .menu {
   position: absolute;
