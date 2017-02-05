@@ -6,11 +6,16 @@ $(document).ready(function() {
     $('.menu').toggleClass('open');
     $(".menuVert").toggle("slide", {direction: "right"}, 'fast');
   });
+//SCREENFIX
+  var fullH = $("#landingPage, #thei");
 
-  /Mobile/.test(navigator.userAgent) && !location.hash && setTimeout(function () {
-      if (!pageYOffset) window.scrollTo(0, 1);
-  }, 1000);
+  function resizeBackground() {
+      fullH.height($(window).height());
+  }
 
+  $(window).resize(resizeBackground);
+  resizeBackground();
+//END
   var $win = $(window),
       $winH = $win.height();
 
