@@ -282,7 +282,8 @@ a{
 }
 #theiNfo{
   text-align: justify;
-  margin-top: 2em;
+  margin: 80px auto;
+  position: relative;
 }
 #stuff{
   width: 100%;
@@ -311,13 +312,11 @@ a{
   display: block;
 }
 #projects{
-  /*top: 50%;*/
   transform: translateX(-50%);
   left: 50%;
   width: 90%;
   position: absolute;
   display: block;
-  font-size: 0.1px;
   text-align: center;
 }
 /*#projects:after{
@@ -326,26 +325,21 @@ a{
  display: inline-block;
 }*/
 .proj{
-  width: 300px;
-  height: 200px;
+  width: 30%;
+  height: auto;
   background-color: #e4e4e4;
   display: inline-block;
   overflow: hidden;
-  /*border-radius: 10px;*/
   position: relative;
-  filter: grayscale(60%);
+  filter: grayscale(70%);
   transition: all 0.5s ease;
-  margin: -1px;
+  margin: 2px;
 }
 .proj:hover{
   filter: grayscale(0%);
 }
 .proj > img{
-  width: 300px;
-  height: 200px;
-  transform: translate(-50%,-50%);
-  left: 50%;
-  top: 50%;
+  width: 100%;
   vertical-align: top;
   position: relative;
   /*transition: all 0.5s ease;*/
@@ -497,13 +491,14 @@ a{
     width: 100%;
     top: inherit;
     bottom: 0;
-    height: auto;
+    height: 50%;
     display: block;
   }
   #theiNtro{
     width: 95%;
   }
   #theiNfo{
+    width: 95%;
     margin-top: 1em;
   }
   /*.proj{
@@ -529,5 +524,10 @@ a{
   }
   #works{
     height: auto;
+  }
+  .proj{
+    width: 45%;
+    /*height: auto;*/
+
   }
 }
