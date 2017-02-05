@@ -7,7 +7,7 @@ $(document).ready(function() {
     $(".menuVert").toggle("slide", {direction: "right"}, 'fast');
   });
 //SCREENFIX
-  var fullH = $("#landingPage, #thei");
+  var fullH = $(".fullpage");
 
   function resizeBackground() {
       fullH.height($(window).height());
