@@ -34,8 +34,8 @@ h4{
 p {
   color: black;
   font-family: futura-pt, sans-serif;
-  font-size: 1.5em;
-  line-height: 1.5em;
+  font-size: 4vh;
+  /*line-height: 1.3em;*/
   margin: 0;
   font-weight: 100;
 }
@@ -167,24 +167,26 @@ a{
 }
 #thei h3{
   display: inline;
+  margin-top: 1em;
 }
 #theiBtn{
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
-  bottom: 1%;
+  /*margin: 1em 0;*/
+  bottom: 8%;
   z-index: 1000;
 }
 #theiContent{
-  width: 40%;
+  min-width: 40%;
   height: 100%;
   top: 0;
   position: absolute;
   display: inline-block;
 }
 #albColor{
-  width: 70%;
-  max-width: 400px;
+  max-height: 70% !important;
+  /*max-width: 400px;*/
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -197,8 +199,8 @@ a{
 .in-view > #glasses{
   z-index: 11;
   top: 48.7%;
-  left: 49.3%;
-  width: 55%;
+  left: 49.5%;
+  max-height: 12.8%;
   max-width: 320px;
   position: absolute;
   display: block;
@@ -249,7 +251,7 @@ a{
 #theiNtro{
   transform: translateY(-50%);
   width: 70%;
-  top: 35%;
+  top: 40%;
   margin: 0 auto;
   position: relative;
   text-align: center;
@@ -276,41 +278,47 @@ a{
   text-align: center;
   z-index: 2;
 }
-.titleContent h3, .titleContent p{
+.titleContent h3{
   /*display: inline;*/
+  font-size: 20vh;
   line-height: .7em;
 }
 /*----------------------------------WORKS--------------------------*/
 #works{
   width: 100%;
+  /*height: 100%;*/
   position: relative;
   display: block;
 }
 #projects{
-  width: 90%;
-  position: relative;
+  width: 80%;
+  height: 63%;
+  position: absolute;
   display: block;
   text-align: center;
-  margin: 0 auto;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 55%;
 }
 .proj{
-  width: 30%;
-  height: auto;
-  background-color: #e4e4e4;
+  width: 32%;
+  height: 49%;
   display: inline-block;
   overflow: hidden;
   position: relative;
   filter: grayscale(70%);
   transition: all 0.5s ease;
-  margin: 2px;
+  /*margin: 0 0;*/
+  /*border: 1px solid green;*/
 }
 .proj:hover{
   filter: grayscale(0%);
 }
 .proj > img{
-  width: 100%;
-  vertical-align: top;
-  position: relative;
+  max-height: 100%;
+  max-width: 100%;
+  /*vertical-align: top;
+  position: relative;*/
   /*transition: all 0.5s ease;*/
   /*filter: blur(1px);*/
 }
@@ -343,16 +351,7 @@ a{
 .socialIcons a{
   display: inline-block;
   margin: 20px 20px;
-  /*font-size: 110%;*/
 }
-
-/*
-.lines {
-  stroke-dasharray: 477;
-  animation: draw 10s ease-in-out alternate infinite;
-  opacity: 0.2;
-}
-*/
 @keyframes draw {
   to {
     stroke-dashoffset: 477;
@@ -540,6 +539,9 @@ a{
   animation-direction: normal, alternate;
 }
 @media screen and (max-width:600px) {
+  .menu{
+    right: 10px;
+  }
   #albinJobs{
     max-height: 55%;
   }
@@ -563,7 +565,7 @@ a{
     width: 100%;
     top: inherit;
     bottom: 0;
-    height: 50%;
+    height: 60%;
     display: block;
   }
   #theiNtro{
@@ -571,7 +573,10 @@ a{
   }
   #theiNfo{
     width: 95%;
-    margin-top: 1em;
+    margin-top: 2em;
+  }
+  #theiNfo p{
+    font-size: 3vh;
   }
   .header{
     display: none;
@@ -589,11 +594,18 @@ a{
   h4{
     font-size: 5vw;
   }
+  .titleContent h3{
+    font-size: 15vh;
+    /*margin-top: .5em;*/
+  }
   #projects{
-    margin-top: 20%;
+    height: auto;
+    top: 50%;
+    width: 100%;
   }
   .proj{
-    width: 45%;
+    width: 48%;
+    height: auto;
   }
   #contact{
     height: 100vh;
