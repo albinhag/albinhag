@@ -44,7 +44,45 @@ function checkThis() {
   })
 };
 
+//OVERLAYTXT
+  var $noBo = document.getElementById('#noBo');
+  var $coty = document.getElementById('#coty');
 
+  $('.proj').click(function(){
+    $('#overlayText').removeClass('hidden');
+    $("body").css("overflow", "hidden")
+  })
+  $('.close').click(function(){
+    $('#overlayText').addClass('hidden');
+    $('.projCont').addClass('hidden');
+    $("body").css("overflow", "auto");
+    player.pause();
+    player2.pause();
+  })
+  $('#noBo').click(function(){
+    $('#noBoring').removeClass('hidden');
+  })
+  $('#coty').click(function(){
+    $('#cotyCont').removeClass('hidden');
+  })
+  $('#msf').click(function(){
+    $('#msfCont').removeClass('hidden');
+  })
+  // $('#taskR').click(function(){
+  //   $('#TASKRUNNER').removeClass('hidden');
+  // })
+  // $('#miss').click(function(){
+  //   $('#MISSING').removeClass('hidden');
+  // })
+  // $('#kitten').click(function(){
+  //   $('#KITTENS').removeClass('hidden');
+  // })
+
+  var iframe = document.querySelector('#cotyVid');
+  var iframe2 = document.querySelector('#msfVid');
+  var player = new Vimeo.Player(iframe);
+  var player2 = new Vimeo.Player(iframe2);
+  // Execute the `play` method of the API when something with id start is clicked
 
   //CHECK PATH LENGTH
  //  var path = document.querySelector('#nLine');
