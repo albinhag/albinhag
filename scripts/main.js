@@ -28,6 +28,7 @@ function checkThis() {
 
     if (scrTp > $winH) {
       $('.menu, .menuVert').css('position', 'fixed');
+
       return;
     } else if (scrTp < ($winH / 2) ) {
       $('.menuVert').slideUp('medium');
@@ -36,10 +37,11 @@ function checkThis() {
     } else {
       if (scrTp < $winH) {
         $('.menu, .menuVert').css('position', 'absolute');
+        // $('#albinJobs').fadeIn('slow');
         return;
       }
     }
-    console.log($winH);
+    // console.log($winH);
 
   })
 };
@@ -68,9 +70,9 @@ function checkThis() {
   $('#msf').click(function(){
     $('#msfCont').removeClass('hidden');
   })
-  // $('#taskR').click(function(){
-  //   $('#TASKRUNNER').removeClass('hidden');
-  // })
+  $('#taskR').click(function(){
+    $('#taskCont').removeClass('hidden');
+  })
   // $('#miss').click(function(){
   //   $('#MISSING').removeClass('hidden');
   // })
@@ -104,6 +106,7 @@ function checkThis() {
             }
         });
     });
+
 //SCROLL TO ANIMATE
     var $animation_elements = $('#albColor');
     // var $window = $(window);
@@ -122,15 +125,11 @@ function checkThis() {
             //check to see if this current container is within viewport
             if ((element_bottom_position >= window_top_position) &&
                 (element_top_position <= window_bottom_position)) {
-                // $element.addClass('in-view');
                 $('#theiNtro').addClass('in-view');
                 $('#theiContent').addClass('in-view');
-                $('#navLines').addClass('in-view');
             } else {
-                // $element.removeClass('in-view');
                 $('#theiNtro').removeClass('in-view');
                 $('#theiContent').removeClass('in-view');
-                $('#navLines').removeClass('in-view');
             }
         });
     }
