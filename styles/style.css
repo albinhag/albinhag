@@ -398,7 +398,7 @@ a{
   0% { opacity: 0; }
 }
 .in-view > .hideAlb {
-  animation-delay: 6.5s;
+  animation-delay: 8s;
   animation: blinker 100ms alternate 5s backwards 10 ;
 }
 @keyframes slider {
@@ -406,7 +406,7 @@ a{
 }
 .in-view > .islide{
   margin-left: 0em;
-  animation: slider 2s backwards 4s;
+  animation: slider 3s backwards 4s;
 }
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
