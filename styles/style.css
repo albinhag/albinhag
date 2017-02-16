@@ -398,15 +398,15 @@ a{
   0% { opacity: 0; }
 }
 .in-view > .hideAlb {
-  animation-delay: 8s;
-  animation: blinker 100ms alternate 5s backwards 10 ;
+  animation-delay: 6s;
+  animation: blinker 2s alternate 5s backwards;
 }
 @keyframes slider {
   0% {margin-left: -1em;}
 }
 .in-view > .islide{
   margin-left: 0em;
-  animation: slider 3s backwards 4s;
+  animation: slider 3s backwards 3s;
 }
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
