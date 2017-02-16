@@ -47,8 +47,15 @@ function checkThis() {
 };
 
 //OVERLAYTXT
-  var $noBo = document.getElementById('#noBo');
-  var $coty = document.getElementById('#coty');
+$(document).keyup(function(event) {
+    if(event.which === 27) {
+      $('#overlayText').addClass('hidden');
+      $('.projCont').addClass('hidden');
+      $("body").css("overflow", "auto");
+      player.pause();
+      player2.pause();
+    }
+});
 
   $('.proj').click(function(){
     $('#overlayText').removeClass('hidden');
@@ -73,12 +80,12 @@ function checkThis() {
   $('#taskR').click(function(){
     $('#taskCont').removeClass('hidden');
   })
-  // $('#miss').click(function(){
-  //   $('#MISSING').removeClass('hidden');
-  // })
-  // $('#kitten').click(function(){
-  //   $('#KITTENS').removeClass('hidden');
-  // })
+  $('#miss').click(function(){
+    $('#missingCont').removeClass('hidden');
+  })
+  $('#kitten').click(function(){
+    $('#kittenCont').removeClass('hidden');
+  })
 
   var iframe = document.querySelector('#cotyVid');
   var iframe2 = document.querySelector('#msfVid');
