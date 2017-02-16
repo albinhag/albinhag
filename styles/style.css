@@ -398,7 +398,7 @@ a{
   0% { opacity: 0; }
 }
 .in-view > .hideAlb {
-  animation-delay: 6s;
+  animation-delay: 6.5s;
   animation: blinker 100ms alternate 5s backwards 10 ;
 }
 @keyframes slider {
