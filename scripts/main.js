@@ -51,7 +51,7 @@ $(document).keyup(function(event) {
     if(event.which === 27) {
       $('#overlayText').addClass('hidden');
       $('.projCont').addClass('hidden');
-      $("body").css("overflow", "auto");
+      $('body').css('overflow', 'auto');
       player.pause();
       player2.pause();
     }
@@ -59,12 +59,14 @@ $(document).keyup(function(event) {
 
   $('.proj').click(function(){
     $('#overlayText').removeClass('hidden');
-    $("body").css("overflow", "hidden")
+    $('body, html').css('overflow', 'hidden')
+
   })
   $('.close').click(function(){
     $('#overlayText').addClass('hidden');
     $('.projCont').addClass('hidden');
-    $("body").css("overflow", "auto");
+    $('body, html').css('overflow', 'auto');
+
     player.pause();
     player2.pause();
   })
