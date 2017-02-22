@@ -382,7 +382,7 @@ a{
   display: inline-block;
   margin: 20px 20px;
 }
-#lazy{
+.socialIcons p{
   font-size: 1em;
 }
 @keyframes draw {
