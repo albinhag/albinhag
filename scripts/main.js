@@ -47,52 +47,52 @@ function checkThis() {
 };
 
 //OVERLAYTXT
-$(document).keyup(function(event) {
-    if(event.which === 27) {
-      $('#overlayText').addClass('hidden');
-      $('.projCont').addClass('hidden');
-      $('body').css('overflow', 'auto');
-      player.pause();
-      player2.pause();
-    }
-});
-
-  $('.proj').click(function(){
-    $('#overlayText').removeClass('hidden');
-    $('body, html').css('overflow', 'hidden')
-
-  })
-  $('.close').click(function(){
-    $('#overlayText').addClass('hidden');
-    $('.projCont').addClass('hidden');
-    $('body, html').css('overflow', 'auto');
-
-    player.pause();
-    player2.pause();
-  })
-  $('#noBo').click(function(){
-    $('#noBoring').removeClass('hidden');
-  })
-  $('#coty').click(function(){
-    $('#cotyCont').removeClass('hidden');
-  })
-  $('#msf').click(function(){
-    $('#msfCont').removeClass('hidden');
-  })
-  $('#taskR').click(function(){
-    $('#taskCont').removeClass('hidden');
-  })
-  $('#miss').click(function(){
-    $('#missingCont').removeClass('hidden');
-  })
-  $('#kitten').click(function(){
-    $('#kittenCont').removeClass('hidden');
-  })
-
-  var iframe = document.querySelector('#cotyVid');
-  var iframe2 = document.querySelector('#msfVid');
-  var player = new Vimeo.Player(iframe);
-  var player2 = new Vimeo.Player(iframe2);
+// $(document).keyup(function(event) {
+//     if(event.which === 27) {
+//       $('#overlayText').addClass('hidden');
+//       $('.projCont').addClass('hidden');
+//       $('body').css('overflow', 'auto');
+//       player.pause();
+//       player2.pause();
+//     }
+// });
+//
+//   $('.proj').click(function(){
+//     $('#overlayText').removeClass('hidden');
+//     $('body, html').css('overflow', 'hidden')
+//
+//   })
+//   $('.close').click(function(){
+//     $('#overlayText').addClass('hidden');
+//     $('.projCont').addClass('hidden');
+//     $('body, html').css('overflow', 'auto');
+//
+//     player.pause();
+//     player2.pause();
+//   })
+//   $('#noBo').click(function(){
+//     $('#noBoring').removeClass('hidden');
+//   })
+//   $('#coty').click(function(){
+//     $('#cotyCont').removeClass('hidden');
+//   })
+//   $('#msf').click(function(){
+//     $('#msfCont').removeClass('hidden');
+//   })
+//   $('#taskR').click(function(){
+//     $('#taskCont').removeClass('hidden');
+//   })
+//   $('#miss').click(function(){
+//     $('#missingCont').removeClass('hidden');
+//   })
+//   $('#kitten').click(function(){
+//     $('#kittenCont').removeClass('hidden');
+//   })
+//
+//   var iframe = document.querySelector('#cotyVid');
+//   var iframe2 = document.querySelector('#msfVid');
+//   var player = new Vimeo.Player(iframe);
+//   var player2 = new Vimeo.Player(iframe2);
   // Execute the `play` method of the API when something with id start is clicked
 
   //CHECK PATH LENGTH
