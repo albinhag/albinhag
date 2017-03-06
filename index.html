@@ -23,13 +23,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="icon" type="image/png" href="icons/favicon-16x16.png" sizes="16x16">
     <link rel="manifest" href="icons/manifest.json">
     <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+    	$(".loader").fadeOut("slow");
+    })
+    </script>
 </head>
 <body>
+  <div class="loader"></div>
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCWLP38"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<div class="se-pre-con"><img src="pics/albLogo.gif"></div>
     <div class="header">
       <a href="#landingPage">
         <h2>albin hagström</h2></a>

@@ -1,11 +1,3 @@
-$("body").css('overflow', 'hidden')
-$(function() {
-    setTimeout(function() {
-        $(".se-pre-con").hide('blind', {}, 500)
-        $("body").css('overflow', 'auto')
-    }, 6300);
-});
-
 $(document).ready(function() {
 // MENU SHIT
   $('.menuVert').hide();
