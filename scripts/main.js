@@ -1,3 +1,11 @@
+$("body").css('overflow', 'hidden')
+$(function() {
+    setTimeout(function() {
+        $(".se-pre-con").hide('blind', {}, 500)
+        $("body").css('overflow', 'auto')
+    }, 6300);
+});
+
 $(document).ready(function() {
 // MENU SHIT
   $('.menuVert').hide();
@@ -6,16 +14,7 @@ $(document).ready(function() {
     $('.menu').toggleClass('open');
     $(".menuVert").toggle("slide", {direction: "right"}, 'fast');
   });
-//SCREENFIX
-  // var fullH = $(".fullpage");
-  //
-  // function resizeBackground() {
-  //     fullH.height($(window).outerHeight(true));
-  // }
-  //
-  // $(window).resize(resizeBackground);
-  // resizeBackground();
-//END
+
   var $win = $(window),
       $winH = $win.height();
 
@@ -37,69 +36,11 @@ function checkThis() {
     } else {
       if (scrTp < $winH) {
         $('.menu, .menuVert').css('position', 'absolute');
-        // $('#albinJobs').fadeIn('slow');
         return;
       }
     }
-    // console.log($winH);
-
   })
 };
-
-//OVERLAYTXT
-// $(document).keyup(function(event) {
-//     if(event.which === 27) {
-//       $('#overlayText').addClass('hidden');
-//       $('.projCont').addClass('hidden');
-//       $('body').css('overflow', 'auto');
-//       player.pause();
-//       player2.pause();
-//     }
-// });
-//
-//   $('.proj').click(function(){
-//     $('#overlayText').removeClass('hidden');
-//     $('body, html').css('overflow', 'hidden')
-//
-//   })
-//   $('.close').click(function(){
-//     $('#overlayText').addClass('hidden');
-//     $('.projCont').addClass('hidden');
-//     $('body, html').css('overflow', 'auto');
-//
-//     player.pause();
-//     player2.pause();
-//   })
-//   $('#noBo').click(function(){
-//     $('#noBoring').removeClass('hidden');
-//   })
-//   $('#coty').click(function(){
-//     $('#cotyCont').removeClass('hidden');
-//   })
-//   $('#msf').click(function(){
-//     $('#msfCont').removeClass('hidden');
-//   })
-//   $('#taskR').click(function(){
-//     $('#taskCont').removeClass('hidden');
-//   })
-//   $('#miss').click(function(){
-//     $('#missingCont').removeClass('hidden');
-//   })
-//   $('#kitten').click(function(){
-//     $('#kittenCont').removeClass('hidden');
-//   })
-//
-//   var iframe = document.querySelector('#cotyVid');
-//   var iframe2 = document.querySelector('#msfVid');
-//   var player = new Vimeo.Player(iframe);
-//   var player2 = new Vimeo.Player(iframe2);
-  // Execute the `play` method of the API when something with id start is clicked
-
-  //CHECK PATH LENGTH
- //  var path = document.querySelector('#nLine');
- //  var length = path.getTotalLength();
- // console.log(length);
-
 //SMOOTH SCROLLING
     $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {
@@ -118,7 +59,6 @@ function checkThis() {
 
 //SCROLL TO ANIMATE
     var $animation_elements = $('#albColor');
-    // var $window = $(window);
 
     function check_if_in_view() {
         var window_height = $win.height();
@@ -144,40 +84,5 @@ function checkThis() {
     }
     $win.on('scroll resize', check_if_in_view);
     $win.trigger('scroll');
-
-    // if  ($(this).scrollTop() > (winH*1.5)) {
-    //     // $element.addClass('in-view');
-    //     $('#theiNtro').addClass('in-view');
-    //     $('#theiContent').addClass('in-view');
-    // } else if  ($(this).scrollTop() < (winH*1.5) ){
-    //     // $element.removeClass('in-view');
-    //     $('#theiNtro').removeClass('in-view');
-    //     $('#theiContent').removeClass('in-view');
-    // };
-
-// END
-
-    //DRAW WITH SCROLLING
-    // // Get the id of the <path> element and the length of <path>
-    // var triangle = document.getElementById("glassass");
-    // var length = triangle.getTotalLength();
-    //
-    // // The start position of the drawing
-    // triangle.style.strokeDasharray = 1000 + length;
-    //
-    // // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
-    // triangle.style.strokeDashoffset = length;
-    //
-    // // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
-    // window.addEventListener("scroll", myFunction);
-    //
-    // function myFunction() {
-    //   var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-    //
-    //   var draw = length * scrollpercent;
-    //
-    //   // Reverse the drawing (when scrolling upwards)
-    //   triangle.style.strokeDashoffset = length - draw;
-    // }
 
 });
