@@ -1,4 +1,9 @@
 $(document).ready(function() {
+  $(function() {
+      setTimeout(function() {
+          $(".loader").fadeOut(500)
+      }, 1500);
+  });
 // MENU SHIT
   $('.menuVert').hide();
 

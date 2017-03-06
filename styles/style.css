@@ -234,7 +234,7 @@ a{
   margin: 0 auto;
   position: relative;
   text-align: center;
-  z-index: 1000;
+  z-index: 99;
 }
 #theiNfo{
   text-align: justify;
@@ -619,9 +619,12 @@ a{
 	height: 100%;
 	z-index: 9999;
 	background: url('../pics/albLoad.gif') 50% 50% no-repeat rgb(249,249,249);
+  background-size: auto;
 }
 @media screen and (max-width:600px) {
-
+.loader{
+  background-size: contain;
+}
   .menu{
     right: 2px;
   }
