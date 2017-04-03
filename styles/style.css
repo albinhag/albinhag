@@ -143,17 +143,16 @@ a{
   width: 95%;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 100;
   position: absolute;
-  z-index: 10;
-  transition: 2s;
 }
 #albinJobs{
   max-height: 70%;
   right: 0px;
   bottom: 0px;
   position: absolute;
-  transition: 2s;
-  z-index: 2;
+  /*transition: 2s;*/
+  z-index: 1;
 }
 /*----------------------------------THE I--------------------------*/
 #thei{
@@ -173,7 +172,8 @@ a{
   text-align: center;
 }
 .theiBtn{
-
+z-index: 60000;
+position: relative;
 }
 #theiContent{
   min-width: 40%;
@@ -634,6 +634,9 @@ a{
   }
   .btn14.open{
     right: 20px;
+  }
+  .btnLanding{
+    bottom: 40% !important;
   }
   #albinJobs{
     max-height: 55%;
